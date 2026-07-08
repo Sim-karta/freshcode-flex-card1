@@ -11,9 +11,17 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .card {
     display: flex;
     flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    min-width: 300px;
     border-radius: 1.5rem;
     box-shadow: 0 0 1.5rem #b3b3b3;
 }
@@ -59,13 +67,70 @@ body {
 
 .card__header-earning {
     color: #6b6b6b;
+    font-weight: 600;
 }
 
 .card__body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 0.5rem;
     padding: 1rem 2rem;
     background-color: #ebebeb;
     border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.card__body-address {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.card__body-city {
+    color: #6b6b6b;
+    font-weight: 600;
+}
+
+.card__body-description {
+    color: #6b6b6b;
+}
+
+.card__body a:first-of-type {
+    margin-top: 1.5rem;
+}
+
+.card__body a:last-of-type {
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid #52c0de;
+    border-radius: 0.5rem;
+    color: #52c0de;
+}
+
+.button--blue {
+    background-color: #52c0de;
+    color: #fff;
+}
+
+.card__body-status {
+    position: relative;
+    color: #6b6b6b;
+}
+
+.card__body-status::before {
+    position: absolute;
+    left: -25%;
+    top: 50%;
+    translate: 0 -50%;
+    content: "";
+    background-color: #59eb65;
+    width: 0.5rem;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
 }
